@@ -1,4 +1,3 @@
-
 #define OUTPUT_PORT 12
 #define INPUT_PORT 2
 
@@ -16,13 +15,13 @@ void loop()
   // Read the value on the INPUT_PORT
 	buttonState = digitalRead(INPUT_PORT);
   	
-    // If the button is pressed switch the state of the LED
-    if (buttonState == HIGH) {
-    	toggleState = !toggleState;
-      delay(200);
-    }
+  // If the button is pressed switch the state of the LED
+  if (buttonState == HIGH) {
+    toggleState = !toggleState;
+    delay(200);
+  }
 
-    // Update the state of the LED
-  	digitalWrite(OUTPUT_PORT, toggleState);
+  // Update the state of the LED
+  digitalWrite(OUTPUT_PORT, toggleState);
   
 }

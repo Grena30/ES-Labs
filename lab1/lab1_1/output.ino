@@ -1,5 +1,3 @@
-
-
 // https://forum.arduino.cc/t/printf-on-arduino/888528/3
 
 FILE f_out;
