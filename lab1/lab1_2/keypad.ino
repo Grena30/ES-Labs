@@ -10,8 +10,8 @@ char keypadArray[rows][columns] = {
   {'*', '0', '#', 'D'},
 };
 
-byte rowPins[rows] = {9, 8, 7, 6};
-byte columnPins[columns] = {16, 17, 18, 19};
+byte rowPins[rows] = {4, 5, 6, 7};
+byte columnPins[columns] = {8, 9, 10, 11};
 
 Keypad keypad = Keypad(makeKeymap(keypadArray), rowPins, columnPins, rows, columns);
 

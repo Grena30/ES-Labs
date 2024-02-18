@@ -1,15 +1,15 @@
-#include <Adafruit_LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
+#include <Wire.h>
 #include <stdio.h>
 #include <string.h>
 
 #define BAUD_RATE 4800
 #define MAX_INPUT_LENGTH 10
-#define SUCCESS_PIN 15
-#define ERROR_PIN 14
+#define SUCCESS_PIN 2
+#define ERROR_PIN 3
 
-const int rs = 12, enable = 11, db4 = 5, db5 = 4, db6 = 3, db7 = 2;
 const int lcdDimensions[2] = {16, 2};
-Adafruit_LiquidCrystal lcd(rs, enable, db4, db5, db6, db7); 
+LiquidCrystal_I2C lcd(0x27, lcdDimensions[0], lcdDimensions[1]); 
 char input[MAX_INPUT_LENGTH];
 int inputLen = 0;
 char enterKey = '#';
@@ -20,7 +20,7 @@ void clearLcd() {
   // Set the init LCD text
   lcd.clear();
   lcd.begin(lcdDimensions[0], lcdDimensions[1]);
-  lcd.print("Enter passcode\n");
+  lcd.print("Enter passcode");
 
   // Clear the input 
   memset(input, '\0', sizeof(input));
@@ -28,6 +28,8 @@ void clearLcd() {
 }
 
 void setup() {
+  lcd.init();
+  lcd.backlight();
   pinMode(SUCCESS_PIN, OUTPUT);
   pinMode(ERROR_PIN, OUTPUT);
   Serial.begin(BAUD_RATE);
@@ -80,4 +82,3 @@ void loop() {
 
   }
 }
-
