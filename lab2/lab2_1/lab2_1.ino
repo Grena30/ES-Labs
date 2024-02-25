@@ -4,17 +4,14 @@
 #include "task3.h"
 #include "task_idle.h"
 
-void setup()
-{
+void setup() {
     task1_setup();
     task2_setup();
     task3_setup();
-    task_idle_setup();  
-
+    task_idle_setup();
 }
 
-void loop()
-{
+void loop() {
     task1_loop();
     task2_loop();
     task3_loop();
