@@ -1,1 +1,1 @@
-Operatin System - Sequential Tasks
+# Operating System - Sequential Tasks
