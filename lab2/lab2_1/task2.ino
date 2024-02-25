@@ -2,7 +2,7 @@
 #include <Arduino.h>
 
 void task2_setup() {
-    pinMode(INTERMITTEN_LED_PORT, OUTPUT);
+    pinMode(INTERMITTENT_LED_PORT, OUTPUT);
 }
 
 void task2_loop() {
@@ -13,9 +13,9 @@ void task2_loop() {
             // Save the last time the LED was blinked
             previousMillis = currentMillis;
 
-            digitalWrite(INTERMITTEN_LED_PORT, !digitalRead(INTERMITTEN_LED_PORT));
+            digitalWrite(INTERMITTENT_LED_PORT, !digitalRead(INTERMITTENT_LED_PORT));
         }
     } else {
-        digitalWrite(INTERMITTEN_LED_PORT, LOW);
+        digitalWrite(INTERMITTENT_LED_PORT, LOW);
     }
 }

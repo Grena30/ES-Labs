@@ -13,6 +13,9 @@ char input[MAX_INPUT_LENGTH];
 void setup() {
   Serial.begin(BAUD_RATE);
   redirectOutput();
+  printf("Help:\n");
+  printf("led on - turns the LED on\n");
+  printf("led off - turns the LED off\n");
   pinMode(OUTPUT_PORT, OUTPUT);
 }
 

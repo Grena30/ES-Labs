@@ -1,5 +1,5 @@
-#ifndef task_idel_h
-#define task_idel_h
+#ifndef task_idle_h
+#define task_idle_h
 
 #define BAUD_RATE 9600
 
