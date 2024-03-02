@@ -1,1 +1,1 @@
-# Operating System - Sequential Tasks
+# Operating System - FreeRTOS
