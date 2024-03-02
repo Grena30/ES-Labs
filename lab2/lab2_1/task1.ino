@@ -14,7 +14,7 @@ void task1_loop() {
     // If the button is pressed and was not pressed previously
     if (buttonState == HIGH && previousButtonState == LOW) {
         ledState = !ledState;
-        delay(200);
+        delay(DELAY_TIME);
     }
 
     digitalWrite(OUTPUT_PORT, ledState);

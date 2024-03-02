@@ -3,6 +3,7 @@
 
 #define OUTPUT_PORT 3
 #define INPUT_PORT 4
+#define DELAY_TIME 100
 
 int buttonState = 0;
 extern int ledState = LOW;
