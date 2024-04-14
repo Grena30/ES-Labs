@@ -60,6 +60,7 @@ int getTemp(int analogValue) {
 void setup() {
   Serial.begin(BAUD_RATE);
   pinMode(LED_OUT_PIN, OUTPUT);
+  pinMode(TEMP_OUT_PIN, OUTPUT);
   lcd.begin(lcdDimensions[0], lcdDimensions[1]);
   lcdInit();
   // redirectOutput();
